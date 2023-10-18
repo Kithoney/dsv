@@ -49,7 +49,7 @@ jobs:
       - name: Checkout the ENV Repo
         uses: actions/checkout@v3
         with:
-          repository: '<dockeruser>/<dockerrepo>'
+          repository: '<armures>/<devsecopslab>'
           ref: 'main'
           token:  ${{ secrets.GITLEAKS}}
 
@@ -63,7 +63,7 @@ jobs:
 
       - name: Commit and Push to ENV repo
         run: |
-          git config  user.email "your email"
-          git config  user.name "${{ github.actor }}"
+          git config  user.email "armuresc@gmail.com"
+          git config  user.name "${{ armures }}"
           git commit -a -m 'Env file is updated with the new image ${{ github.ref_name }}'
           git push https://${{ secrets.GITLEAKS }}@github.com<dockeruser>/<dockerrepo>.git
