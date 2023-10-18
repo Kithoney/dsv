@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: armures/devsecopslab:v12
+          image: armures/devsecopslab:v18
           resources:
             requests:
               memory: "50Mi"
