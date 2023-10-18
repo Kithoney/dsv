@@ -49,7 +49,7 @@ jobs:
       - name: Checkout the ENV Repo
         uses: actions/checkout@v3
         with:
-          repository: 'Kithoney/dsv'
+          repository: 'kithoney/dsv'
           ref: 'main'
           token:  ${{ secrets.GITLEAKS}}
 
@@ -64,6 +64,6 @@ jobs:
       - name: Commit and Push to ENV repo
         run: |
           git config  user.email "armuresc@gmail.com"
-          git config  user.name "Kithoney"
+          git config  user.name "kithoney"
           git commit -a -m 'Env file is updated with the new image ${{ github.ref_name }}'
           git push https://${{ secrets.GITLEAKS }}@github.comarmures/devsecopslab.git
