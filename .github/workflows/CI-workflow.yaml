@@ -44,12 +44,12 @@ jobs:
       - name: Push Image
         run: |
           docker tag test_${{ github.run_number }}:v1 hashko/devsecopslab:v${{ github.run_number }}
-          docker push <Armures>/<devsecopslab>:v${{ github.run_number }}
+          docker push Kithoney/dsv:v${{ github.run_number }}
 
       - name: Checkout the ENV Repo
         uses: actions/checkout@v3
         with:
-          repository: '<Kithoney>/<dsv>'
+          repository: 'Kithoney/dsv'
           ref: 'main'
           token:  ${{ secrets.GITLEAKS}}
 
