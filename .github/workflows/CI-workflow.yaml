@@ -66,4 +66,4 @@ jobs:
           git config  user.email "armuresc@gmail.com"
           git config  user.name "kithoney"
           git commit -a -m 'Env file is updated with the new image ${{ github.ref_name }}'
-          git push https://${{ secrets.GITLEAKS }}@github.comkithoney/dsv.git
+          git push https://${{ secrets.GITLEAKS }}@github.com/kithoney/dsv.git
