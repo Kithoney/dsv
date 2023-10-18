@@ -64,6 +64,6 @@ jobs:
       - name: Commit and Push to ENV repo
         run: |
           git config  user.email "armuresc@gmail.com"
-          git config  user.name "kithoney"
+          git config  user.name "Kithoney"
           git commit -a -m 'Env file is updated with the new image ${{ github.ref_name }}'
-          git push https://${{ secrets.GITLEAKS }}@github.com/kithoney/dsv.git
+          git push https://${{ secrets.GITLEAKS }}@github.com/Kithoney/dsv.git
